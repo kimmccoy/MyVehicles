@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MyVehiclesWeb/MyVehiclesWeb.csproj" />
+  <Project Path="Services/Services.csproj" Id="dd61e1a6-ca6c-4d5f-b852-5b59e0dea074" />
+  <Project Path="Shared/Shared.csproj" Id="56432780-abfb-498c-9bce-efbdae04ddfd" />
+</Solution>
