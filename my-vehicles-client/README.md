@@ -9,6 +9,9 @@ It demonstrates
  - SignalR data exchange between the client and server
 
  It isn't hardened or optimised for production use.
+ 
+ Tests
+  - oh dear. There are no UI tests. 
 
  API documentation is available at https://localhost:7069/scalar
   - this will require logging in via the normal cookie based login to 
