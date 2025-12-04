@@ -1,0 +1,48 @@
+<h1>Your Vehicles</h1>
+<div class="row">
+
+    <div class="mb-3 col-sm-3">
+        <label for="selectedMake" class="form-label">Filter By Make</label>
+        <select [(ngModel)]="selectedMake" class="form-control">
+            <option [ngValue]="undefined">(All)</option>
+
+            @for (make of makes(); track make) {
+            <option [ngValue]="make">{{ make }}</option>
+            }
+        </select>
+
+    </div>
+
+</div>
+
+<table class="table table-condensed table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Rego</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of vehicles(); track item.vehicleId) {
+        <tr>
+            <td>{{ item.make }}</td>
+            <td>{{ item.model}}</td>
+            <td>{{ item.year }}</td>
+            <td>{{ item.currentRegistrationNumber }}</td>
+            <td><a [routerLink]="['/registration', item.vehicleId]">{{ item.currentRegistrationNumber }}</a></td>
+        </tr>
+        } @empty {
+        <tr>
+            <td colspan="3">
+                <!-- TODO: should show 'loading...' or 'no vehicles found' -->
+                There are no vehicles found for your account
+            </td>
+        </tr>
+        }
+        <tr>
+
+        </tr>
+    </tbody>
+</table>
